@@ -1,0 +1,13 @@
+.modal-content {
+    background-color: #525659 !important;
+  }
+  .modal-header{
+    border-bottom: none;
+    .btn-close{
+       background: url('/close.svg') no-repeat center center;
+       opacity: 1;
+    }
+  }
+  .modal-dialog{
+    max-width: 550px;
+  }

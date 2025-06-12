@@ -1,0 +1,129 @@
+.bnrSec {
+    overflow: hidden;
+    position: relative;
+    @media(max-width:991px){
+        background: #181818; 
+        padding-bottom: 20px;
+        text-align: center;
+    }
+
+    :global(.col-lg-6) {
+        position: absolute;
+        top: 0;
+        display: grid;
+        align-items: center;
+        bottom: 0;
+        @media(max-width:991px){
+            position: initial;
+        }
+    }
+
+    .bnrSecTlt {
+        font-size: 55px;
+        color: #fff;
+        font-weight: 500;
+
+        @media(max-width:1399px) {
+            font-size: 50px;
+        }
+
+        @media(max-width:767px) {
+            font-size: 35px;
+        }
+        @media(max-width:991px){
+            text-align: center;
+            margin-top: 20px;
+        }
+    }
+
+    .bnrSecCnt {
+        font-size: 17px;
+        color: #fff;
+        margin-bottom: 0px;
+        margin-top: 15px;
+        font-weight: 100;
+        width: 70%;
+        line-height: 1.7;
+
+        @media(max-width:1399px) {
+            font-size: 16px;
+            width: 80%;
+        }
+
+        @media(max-width:991px) {
+            width: 100%;
+            text-align: center;
+        }
+        
+    }
+
+    .bnrBtnDiv {
+        margin-top: 30px;
+        display: flex;
+        gap: 20px;
+        @media(max-width:991px){
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btnMn {
+            background: #2E7D32;
+            padding: 12px 30px 12px 5px;
+            border-radius: 15px;
+            position: relative;
+            z-index: 1;
+            &:after{
+                content: "";
+                position: absolute;
+                right: 5px;
+                top: 12px;
+                background: url('./assets/arrow.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: top right;
+                width:50%;
+                height: 50%;
+                z-index: -1;
+            }
+        }
+
+        .bnrBtn {
+            background: #fff;
+            padding: 10px 15px;
+            color: #2E7D32;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 15px;
+
+        }
+    }
+    :global(.slick-dots){
+        bottom: 30px;
+        right: 50px;
+        left: auto;
+        width: fit-content;
+        :global(.slick-active){
+                button{
+                    &:before{
+                        background: #49B618;
+                        border:transparent;
+                        color: transparent;
+                        opacity: 1;
+                    }
+                }
+            
+        }
+        li{
+            button{
+                &:before{
+                    opacity: 1;
+                    color: transparent;
+                    border:1px solid #fff;
+                    border-radius: 50px;
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+        }
+    }
+}

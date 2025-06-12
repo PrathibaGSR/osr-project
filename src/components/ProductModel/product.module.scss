@@ -1,0 +1,16 @@
+.mdlSec {
+    // You can style your section normally here
+  
+    :global(.modal-content) {
+      background-color: #525659;
+    }
+  
+    :global(.modal-header) {
+      border-bottom: none; // Optional: remove header border if needed
+    }
+  
+    :global(.modal-body) {
+      padding: 2rem;
+    }
+  }
+  

@@ -1,0 +1,83 @@
+.testSec {
+    padding: 70px 0px;
+
+    .testSecSub {
+        font-size: 18px;
+        font-weight: 500;
+        color: #2E7D32;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 0px;
+
+        @media(max-width:1399px) {
+            font-size: 17px;
+        }
+    }
+
+    .testSecTlt {
+        color: #000;
+        font-weight: 600;
+        font-size: 40px;
+        margin-top: 10px;
+        text-align: center;
+
+        @media(max-width:1399px) {
+            font-size: 35px;
+        }
+
+        @media(max-width:767px) {
+            font-size: 30px;
+        }
+    }
+
+    .testLst {
+        text-align: center;
+        margin-top: 30px;
+        background: #F0EADF;
+        border-radius: 10px;
+        min-height: 405px;
+        @media(max-width:1399px){
+            min-height: 425px;
+        }
+        @media(max-width:991px){
+            min-height: initial;
+        }
+        .testLstBg {
+            background: #2E7D32;
+            padding: 15px;
+            border-radius: 10px;
+
+            .testLstTlt {
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 0px;
+                color: #fff;
+                margin-top: 10px;
+
+                @media(max-width:1399px) {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .testLstDesc {
+            padding: 15px;
+            img{
+                max-width: 7%;
+            }
+
+            .testLstCnt {
+                font-size: 16px;
+                color: #000;
+                font-weight: 200;
+                margin-bottom: 15px;
+                margin-top: 15px;
+                @media(max-width:1399px) {
+                    font-size: 15px;
+                }
+            }
+        }
+
+    }
+
+}

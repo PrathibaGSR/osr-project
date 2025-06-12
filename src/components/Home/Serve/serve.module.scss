@@ -1,0 +1,66 @@
+.servSec {
+    padding: 50px 0px;
+    background: url('./assets/banner.webp');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    margin-top: 50px;
+    position: relative;
+    z-index: 1;
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0;
+        background: #0000008a;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .servSecTlt {
+        color: #34BE3B;
+        font-weight: 600;
+        font-size: 40px;
+        margin-top: 15px;
+        text-align: center;
+
+        @media(max-width:1399px) {
+            font-size: 35px;
+        }
+
+        @media(max-width:767px) {
+            font-size: 30px;
+        }
+    }
+
+    .servLst {
+        text-align: center;
+        margin-top: 30px;
+
+        .servLstTlt {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 0px;
+            color: #F6B76F;
+            margin-top: 10px;
+            @media(max-width:1399px) {
+                font-size: 18px;
+            }
+        }
+
+        .servLstCnt {
+            font-size: 16px;
+            color: #fff;
+            font-weight: 200;
+            margin-bottom: 0px;
+            margin-top: 5px;
+
+            @media(max-width:1399px) {
+                font-size: 15px;
+            }
+        }
+
+    }
+
+}

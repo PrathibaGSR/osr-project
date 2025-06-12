@@ -1,0 +1,41 @@
+.abtSec{
+    padding: 70px 0px;
+    @media(max-width:991px){
+        text-align: center;
+        padding: 50px 0px;
+        img{
+            margin-top: 30px;
+        }
+    }
+    .abtSecTlt{
+        color: #2E7D32;
+        font-weight: 600;
+        font-size: 40px;
+        @media(max-width:1399px){
+            font-size: 35px;
+        }
+        @media(max-width:767px){
+            font-size: 30px;
+        }
+    }
+    .abtSecSub{
+        font-size: 18px;
+        font-weight: 500;
+        color: #000;
+        text-transform: uppercase;
+        @media(max-width:1399px){
+            font-size: 17px;
+        }
+    }
+    .abtSecCnt{
+        font-size: 16px;
+        color: #000;
+        font-weight: 200;
+        @media(max-width:1399px){
+            font-size: 15px;
+        }
+        @media(max-width:991px){
+            text-align: justify;
+        }
+    }
+}
