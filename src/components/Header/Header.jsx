@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import headStyle from "./header.module.scss";
 import logo from "./assets/logo.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Header() {
     const [scrolled, setScrolled] = useState(false);
@@ -25,9 +26,9 @@ export default function Header() {
         <section className={`${headStyle.headSec} ${scrolled ? headStyle.scrolled : ""}`}>
             <div className="container">
                 <nav className="navbar navbar-expand-lg">
-                    <a className="navbar-brand" href="/">
+                    <Link className="navbar-brand" href="/">
                         <Image src={logo} className="img-fluid" alt="logo" title="logo" width={134} height={119} />
-                    </a>
+                    </Link>
                     <button
                         className="navbar-toggler"
                         type="button"
@@ -42,16 +43,16 @@ export default function Header() {
                     <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                         <ul className="navbar-nav mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <a className={`nav-link ${isActive("/") ? headStyle.active : ""}`} href="/">Home</a>
+                                <Link className={`nav-link ${isActive("/") ? headStyle.active : ""}`} href="/">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <a className={`nav-link ${isActive("/#product") ? headStyle.active : ""}`} href="/#product">Products</a>
+                                <Link className={`nav-link ${isActive("/#product") ? headStyle.active : ""}`} href="/#product">Products</Link>
                             </li>
                             <li className="nav-item">
-                                <a className={`nav-link ${isActive("/#about") ? headStyle.active : ""}`} href="/#about">About Us</a>
+                                <Link className={`nav-link ${isActive("/#about") ? headStyle.active : ""}`} href="/#about">About Us</Link>
                             </li>
                             <li className="nav-item">
-                                <a className={`nav-link ${isActive("/contact-us") ? headStyle.active : ""}`} href="/contact-us">Contact</a>
+                                <Link className={`nav-link ${isActive("/contact-us") ? headStyle.active : ""}`} href="/contact-us">Contact</Link>
                             </li>
                         </ul>
                     </div>

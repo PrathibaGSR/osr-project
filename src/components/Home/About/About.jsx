@@ -19,7 +19,7 @@ export default function About() {
                             <h2 className={abtStyle.abtSecTlt}>About OSR Industries</h2>
                             <p className={abtStyle.abtSecSub}>Trusted. Engineered. Delivered.</p>
                             <p className={abtStyle.abtSecCnt}>At OSR Industries, we are driven by a singular vision: to enable industries with tools that deliver measurable precision. We specialize in high-performance drills, fasteners, reamers, and customized cutting solutions engineered using state-of-the-art CNC and inspection machinery.</p>
-                            <p className={abtStyle.abtSecCnt}>What sets us apart is our investment in top-tier manufacturing infrastructure—from high-tolerance CNC machining centres to multi-axis tool grinders and automated inspection systems. These capabilities empower us to consistently meet the demands of sectors where precision is not optional—it's critical.</p>
+                            <p className={abtStyle.abtSecCnt}>What sets us apart is our investment in top-tier manufacturing infrastructure—from high-tolerance CNC machining centres to multi-axis tool grinders and automated inspection systems. These capabilities empower us to consistently meet the demands of sectors where precision is not optional—its critical.</p>
                             <p className={abtStyle.abtSecCnt}>Whether enabling micro-machining in electronics or creating heavy-load components for transport, we deliver not just tools—but trust, accuracy, and lasting performance.</p>
                         </div>
 
