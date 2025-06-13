@@ -134,7 +134,7 @@ export default function Form() {
                     <span><Image src={mail} alt="mail" title="mail" width={25} height={25} loading="lazy" /></span> <a href="mailto:info@osrindustries.co.in">sales@osrindustries.co.in</a>
                   </li>
                   <li>
-                    <span><Image src={map} alt="map" title="map" width={25} height={25} loading="lazy" /></span> <p>Plot No. 35 Street No. 8, Kadipur Industrial Area, Sector 37C Gurugram - 122001 (Haryana)</p>
+                    <span><Image src={map} alt="map" title="map" width={25} height={25} loading="lazy" /></span> <p>Plot No. 35 Street No. 8, Kadipur Industrial Area, <br/>Sector 37C Gurugram - 122001 (Haryana)</p>
                   </li>
                 </ul>
               </div>

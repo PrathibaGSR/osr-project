@@ -9,13 +9,13 @@ export default function Banner() {
     <>
        <section className={bnrStyle.bnrSec}>
         <div>
-            <Image src={bnr} className="img-fluid" />
+        <Image src={bnr} className="img-fluid" alt="bnr" title="bnr" width={1440} height={389} />
         </div>
         <div className="container">
             <div className={bnrStyle.bnrPos}>
                 <h1 className={bnrStyle.bnrSecTlt}>Tool Holders</h1>
                 <div className={bnrStyle.disDiv}>
-                    <Link href={""}>Home</Link>
+                    <Link href={"/"}>Home</Link>
                     <span>Products</span>
                 </div>
             </div>

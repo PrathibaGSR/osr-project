@@ -33,9 +33,9 @@ export default function Banner() {
             <section className={bnrStyle.bnrSec}>
                 <div className={bnrStyle.slideBnr}>
                     <Slider {...settings}>
-                        <Image src={bnr1} className="img-fluid" alt="" title="" />
-                        <Image src={bnr2} className="img-fluid" alt="" title="" />
-                        <Image src={bnr3} className="img-fluid" alt="" title="" />
+                        <Image width={1440} height={675} src={bnr1} className="img-fluid" alt="Tools Engineered for Performance" title="Tools Engineered for Performance" />
+                        <Image width={1440} height={675} src={bnr2} className="img-fluid" alt="Tools Engineered for Performance" title="Tools Engineered for Performance" />
+                        <Image width={1440} height={675} src={bnr3} className="img-fluid" alt="Tools Engineered for Performance" title="Tools Engineered for Performance" />
                     </Slider>
                 </div>
                 <div className="container">

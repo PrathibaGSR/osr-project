@@ -13,10 +13,10 @@ export default function InnerSec() {
         <div className="container">
           <div className="d-flex justify-content-between">
             <Link href={"/"} className={inrStyle.inrPage}> {"< Home"}</Link>
-            <div>
+            <Link href={"/contact-us"} className="text-decoration-none">
               <Image src={order} className="img-fluid" loading="lazy" alt="Order" title="Order" width={24} height={24} />
               <span>Order</span>
-            </div>
+            </Link>
           </div>
           <div className="row">
             <div className="col-lg-4">
@@ -43,7 +43,7 @@ export default function InnerSec() {
                     </ul>
                   </div>
                 </div>
-                <div className={inrStyle.btn}>Contact Us</div>
+                <Link href={"/contact-us"} className={`${inrStyle.btn} text-decoration-none`}>Contact Us</Link>
               </div>
             </div>
             

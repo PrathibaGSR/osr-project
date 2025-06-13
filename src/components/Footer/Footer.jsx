@@ -6,6 +6,7 @@ import ZeroLogo from "./assets/logo.svg";
 import fb from "./assets/fb.svg";
 import twitter from "./assets/twitter.svg";
 import insta from "./assets/insta.svg";
+import Link from "next/link";
 
 
 export default function Footer() {
@@ -25,9 +26,9 @@ export default function Footer() {
                             </div>
                         </div>
                         <div className="col-lg-2 order-lg-0 order-last mt-lg-0 mt-4">
-                            <div>
+                            <Link href="https://www.ziis.in/" target="_blank">
                                 <Image src={ZeroLogo} className="img-fluid" alt="logo" title="logo" loading="lazy" />
-                            </div>
+                            </Link>
                         </div>
                         <div className="col-lg-5  mt-lg-0 mt-4">
                             <div className={foot.footRght}>

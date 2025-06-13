@@ -33,6 +33,8 @@
     .testLst {
         text-align: center;
         margin-top: 30px;
+        margin-right: 10px;
+        margin-left: 10px;
         background: #F0EADF;
         border-radius: 10px;
         min-height: 405px;
@@ -41,6 +43,9 @@
         }
         @media(max-width:991px){
             min-height: initial;
+        }
+        img{
+            margin: 0 auto;
         }
         .testLstBg {
             background: #2E7D32;

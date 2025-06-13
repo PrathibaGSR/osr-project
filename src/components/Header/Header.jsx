@@ -19,8 +19,9 @@ export default function Header() {
     }, []);
 
     const isActive = (path) => {
-        return router.pathname === path || router.asPath === path;
+        return router.asPath === path;
     };
+    
 
     return (
         <section className={`${headStyle.headSec} ${scrolled ? headStyle.scrolled : ""}`}>
@@ -43,16 +44,16 @@ export default function Header() {
                     <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                         <ul className="navbar-nav mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <Link className={`nav-link ${isActive("/") ? headStyle.active : ""}`} href="/">Home</Link>
+                                <Link className={`nav-link ${isActive("/") ? headStyle.active : ""}`} href="/" >Home</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className={`nav-link ${isActive("/#product") ? headStyle.active : ""}`} href="/#product">Products</Link>
+                                <Link className={`nav-link ${isActive("/#product") ? headStyle.active : ""}`} href="/#product" >Products</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className={`nav-link ${isActive("/#about") ? headStyle.active : ""}`} href="/#about">About Us</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className={`nav-link ${isActive("/contact-us") ? headStyle.active : ""}`} href="/contact-us">Contact</Link>
+                                <Link className={`nav-link ${isActive("/contact-us") ? headStyle.active : ""}`} href="/contact-us" target="_blank">Contact</Link>
                             </li>
                         </ul>
                     </div>
