@@ -4,6 +4,7 @@ import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
 import { Montserrat } from 'next/font/google';
 import '../styles/globals.scss';
+import Head from 'next/head';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -18,6 +19,9 @@ function MyApp({ Component, pageProps }) {
   }, []);
   return (
     <main className={montserrat.className}>
+      <Head>
+        <link rel="icon" href="/fav.ico" />
+      </Head>
       <Header />
       <Component {...pageProps} />
       <Footer />
