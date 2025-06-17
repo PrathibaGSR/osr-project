@@ -20,7 +20,7 @@ export default function Product() {
                     <div>
                         <h2 className={prdStyle.prodSecTlt}>Our Product Range</h2>
                         <div className="row">
-                            <div className="col-lg-3">
+                            <div className="col-lg-3 col-6">
                                 <div className={prdStyle.prodLst}>
                                     <div className={prdStyle.prodLstBg}>
                                         <Image src={img1} className="img-fluid" alt="Drilling" title="Drilling" loading="lazy" width={297} height={268} />
@@ -35,7 +35,7 @@ export default function Product() {
 
                                 </div>
                             </div>
-                            <div className="col-lg-3">
+                            <div className="col-lg-3 col-6">
                                 <div className={prdStyle.prodLst}>
                                     <div className={prdStyle.prodLstBg}>
                                         <Image src={img2} className="img-fluid" alt="Milling" title="Milling" loading="lazy" width={297} height={268} />
@@ -50,7 +50,7 @@ export default function Product() {
 
                                 </div>
                             </div>
-                            <div className="col-lg-3">
+                            <div className="col-lg-3 col-6">
                                 <div className={prdStyle.prodLst}>
                                     <div className={prdStyle.prodLstBg}>
                                         <Image src={img3} className="img-fluid" alt="Reaming" title="Reaming" loading="lazy" width={297} height={268} />
@@ -65,7 +65,7 @@ export default function Product() {
 
                                 </div>
                             </div>
-                            <div className="col-lg-3">
+                            <div className="col-lg-3 col-6">
                                 <div className={prdStyle.prodLst}>
                                     <div className={prdStyle.prodLstBg}>
                                         <Image src={img4} className="img-fluid" alt="Combination Tools" title="Combination Tools" loading="lazy" width={297} height={268} />
@@ -80,7 +80,7 @@ export default function Product() {
 
                                 </div>
                             </div>
-                            <div className="col-lg-3">
+                            <div className="col-lg-3 col-6">
                                 <div className={prdStyle.prodLst}>
                                     <div className={prdStyle.prodLstBg}>
                                         <Image src={img5} className="img-fluid" alt="PCD Cutting Tools" title="PCD Cutting Tools" loading="lazy" width={297} height={268} />
@@ -95,7 +95,7 @@ export default function Product() {
 
                                 </div>
                             </div>
-                            <div className="col-lg-3">
+                            <div className="col-lg-3 col-6">
                                 <div className={prdStyle.prodLst}>
                                     <div className={prdStyle.prodLstBg}>
                                         <Image src={img6} className="img-fluid" alt="PCBN Cutting Tools" title="PCBN Cutting Tools" loading="lazy" width={297} height={268} />
@@ -110,7 +110,7 @@ export default function Product() {
 
                                 </div>
                             </div>
-                            <div className="col-lg-3">
+                            <div className="col-lg-3 col-6">
                                 <div className={prdStyle.prodLst}>
                                     <div className={prdStyle.prodLstBg}>
                                         <Image src={img7} className="img-fluid" alt="Tool Holders" title="Tool Holders" loading="lazy" width={297} height={268} />
@@ -125,7 +125,7 @@ export default function Product() {
 
                                 </div>
                             </div>
-                            <div className="col-lg-3">
+                            <div className="col-lg-3 col-6">
                                 <div className={prdStyle.prodLst}>
                                     <div className={prdStyle.prodLstBg}>
                                         <Image src={img8} className="img-fluid" alt="Specialized Customized Tooling" title="Specialized Customized Tooling" loading="lazy" width={297} height={268} />

@@ -18,7 +18,7 @@ export default function Footer() {
                         <div className="col-lg-5">
                             <div className={foot.footLft}>
                                 <p className={foot.footSecLeftP}>Copyright © 2025  &nbsp;&nbsp;|</p>
-                                <div className="d-flex align-items-center" >
+                                <div className="d-flex align-items-center justify-content-lg-start justify-content-center" >
                                     <Image src={iso} className="img-fluid me-2" alt="iso" title="iso" loading="lazy" />
                                     <p className={foot.footSecLeftP}>ISO 9001:2015 Certified</p>
                                 </div>

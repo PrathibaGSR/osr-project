@@ -2,11 +2,15 @@
     background: #2E7D32;
     @media(max-width:991px){
         padding: 10px 0px 0px 0px;
+        text-align: center;
     }
     .footLft{
         display: flex;
         align-items: center;
         gap: 20px;
+        @media(max-width:991px){
+          justify-content: center;
+        }
         @media(max-width:767px){
             display: block;
         }
@@ -31,9 +35,11 @@
         @media(max-width:1399px){
             gap: 10px;
         }
-        @media(max-width:767px){
-            display: block;
-        }
+        @media(max-width:991px){
+            justify-content: center;
+            flex-wrap: wrap;
+          }
+       
         .footSecRghtP{
             font-size: 14px;
             font-weight: 400;
