@@ -5,7 +5,7 @@ import logo from './assets/logo.svg';
 import Image from 'next/image';
 import Link from 'next/link';
 
-let Collapse; // Global scope
+let Collapse; // Global scope...
 
 export default function Header() {
     const [scrolled, setScrolled] = useState(false);
