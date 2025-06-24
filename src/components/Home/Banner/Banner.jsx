@@ -1,6 +1,5 @@
 import React from "react";
-import bnrStyle from "./banner.module.scss"
-import Link from "next/link";
+import bnrStyle from "./banner.module.scss";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
@@ -8,9 +7,12 @@ import bnr1 from "./assets/bnr1.webp";
 import bnr2 from "./assets/bnr2.webp";
 import bnr3 from "./assets/bnr3.webp";
 import Image from "next/image";
-
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 export default function Banner() {
+    const router = useRouter();
+
     const settings = {
         dots: true,
         infinite: true,
@@ -21,13 +23,26 @@ export default function Banner() {
         arrow: false,
         responsive: [
             {
-              breakpoint: 991,
-              settings: {
-                dots: false
-              }
+                breakpoint: 991,
+                settings: {
+                    dots: false
+                }
             }
-          ]
+        ]
     };
+
+    const scrollToProduct = (e) => {
+        e.preventDefault();
+        const productEl = document.getElementById('product');
+        if (productEl) {
+            const yOffset = -100; // adjust based on your navbar height
+            const y = productEl.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+        } else {
+            router.push("/#product"); // fallback
+        }
+    };
+
     return (
         <>
             <section className={bnrStyle.bnrSec}>
@@ -46,10 +61,10 @@ export default function Banner() {
                                 <p className={bnrStyle.bnrSecCnt}>Explore our range of CNC-optimized cutting tools built for exactness and endurance</p>
                                 <div className={bnrStyle.bnrBtnDiv}>
                                     <div className={bnrStyle.btnMn}>
-                                        <Link href={"/#product"} className={bnrStyle.bnrBtn}>View Our Tools</Link>
+                                        <Link href="/#product" onClick={scrollToProduct} className={bnrStyle.bnrBtn}>View Our Tools</Link>
                                     </div>
                                     <div className={bnrStyle.btnMn}>
-                                        <Link target="_blank" href={"/catalogue.pdf"} className={bnrStyle.bnrBtn}>Download Catalogue</Link>
+                                        <Link target="_blank" href="/catalogue.pdf" className={bnrStyle.bnrBtn}>Download Catalogue</Link>
                                     </div>
                                 </div>
                             </div>
@@ -58,5 +73,5 @@ export default function Banner() {
                 </div>
             </section>
         </>
-    )
+    );
 }

@@ -5,19 +5,17 @@ import logo from './assets/logo.svg';
 import Image from 'next/image';
 import Link from 'next/link';
 
-let Collapse;
-
 export default function Header() {
     const [scrolled, setScrolled] = useState(false);
-    const [activeSection, setActiveSection] = useState('home'); // default active is home
+    const [activeSection, setActiveSection] = useState('home');
+    const [menuOpen, setMenuOpen] = useState(false); // NEW
     const router = useRouter();
 
-    // Navbar style on scroll + active section highlight on scroll
+    // Scroll effect & active section
     useEffect(() => {
         const onScroll = () => {
             setScrolled(window.scrollY > 200);
 
-            // Check visible sections for active state (only product/about here)
             const sections = ['product', 'about'];
             for (let id of sections) {
                 const el = document.getElementById(id);
@@ -29,7 +27,7 @@ export default function Header() {
                     }
                 }
             }
-            // If none matched, set home active by default
+
             setActiveSection('home');
         };
 
@@ -37,7 +35,7 @@ export default function Header() {
         return () => window.removeEventListener('scroll', onScroll);
     }, []);
 
-    // Update activeSection on route change
+    // Set active section on route change
     useEffect(() => {
         const [path, hash] = router.asPath.split('#');
         if (path === '/' && !hash) {
@@ -53,7 +51,7 @@ export default function Header() {
         }
     }, [router.asPath]);
 
-    // Smooth scroll on route change if there's a hash
+    // Smooth scroll when URL hash changes
     useEffect(() => {
         const hash = window.location.hash;
         if (hash) {
@@ -68,30 +66,31 @@ export default function Header() {
         }
     }, [router.asPath]);
 
-    // Import Bootstrap Collapse module
-    useEffect(() => {
-        import('bootstrap/js/dist/collapse').then((mod) => {
-            Collapse = mod.default;
-        });
-    }, []);
+    // Toggle menu manually
+    const toggleMenu = () => {
+        const navbarCollapse = document.getElementById('navbarSupportedContent');
+        if (navbarCollapse) {
+            navbarCollapse.classList.toggle('show');
+            setMenuOpen(navbarCollapse.classList.contains('show'));
+        }
+    };
 
+    // Handle menu link click
     const handleLinkClick = (e, href) => {
         e.preventDefault();
-        const navbarCollapse = document.getElementById('navbarSupportedContent');
 
-        if (navbarCollapse && navbarCollapse.classList.contains('show') && Collapse) {
-            const collapse = new Collapse(navbarCollapse, { toggle: true });
-            collapse.hide();
+        const navbarCollapse = document.getElementById('navbarSupportedContent');
+        if (navbarCollapse?.classList.contains('show')) {
+            navbarCollapse.classList.remove('show');
+            setMenuOpen(false);
         }
 
         const currentPath = router.asPath.split('#')[0];
         const [hrefPath, hrefHash] = href.split('#');
 
         if (currentPath !== hrefPath) {
-            // Navigate to different page (including hash)
             router.push(href);
         } else {
-            // Same page: smooth scroll manually
             setTimeout(() => {
                 if (hrefHash) {
                     const el = document.getElementById(hrefHash);
@@ -102,7 +101,6 @@ export default function Header() {
                         setActiveSection(hrefHash);
                     }
                 } else {
-                    // If no hash, just set active to home
                     setActiveSection('home');
                 }
             }, 300);
@@ -125,17 +123,22 @@ export default function Header() {
                             height={119}
                         />
                     </Link>
+
+                    {/* TOGGLE BUTTON */}
                     <button
                         className="navbar-toggler"
                         type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent"
-                        aria-expanded="false"
+                        onClick={toggleMenu}
                         aria-label="Toggle navigation"
                     >
-                        <span className="navbar-toggler-icon"></span>
+                        {menuOpen ? (
+                            <span style={{ fontSize: '1.5rem' }}>&times;</span> // Close icon ✖
+                        ) : (
+                            <span className="navbar-toggler-icon"></span> // Default icon ☰
+                        )}
                     </button>
+
+                    {/* NAV LINKS */}
                     <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                         <ul className="navbar-nav mb-2 mb-lg-0">
                             <li className="nav-item">
